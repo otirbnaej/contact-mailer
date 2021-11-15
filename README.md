@@ -11,4 +11,5 @@ Inserir as seguintes variáveis:
 - <b>SERVER_EMAIL</b> = Endereço de email a ser utilizado para envio das mensagens
 - <b>SERVER_PASS</b> = Senha do email escolhido. -<b> PORT </b>= Porta utilizada para execução da aplicação.
 
+<br>
 O <b>FRONTEND</b> deve enviar uma requisição do tipo <b>POST</b> contendo um <b>JSON</b> com os dados <b>"name"</b>, <b>"email"</b> e <b>"message"</b>.
