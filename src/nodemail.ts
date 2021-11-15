@@ -1,10 +1,16 @@
 import mailer from 'nodemailer';
 import 'dotenv/config';
 
-const SendEmail = (name, email, message) => {
+interface IData {
+	name: string;
+	email: string;
+	message: string;
+}
+
+const SendEmail = ({ name, email, message }: IData) => {
 	const smtpTransport = mailer.createTransport({
-		host: 'smtp.office365.com',
-		port: 587,
+		host: process.env.SMTP_HOST,
+		port: Number(process.env.SMTP_PORT),
 		secure: false,
 		auth: {
 			user: process.env.SERVER_EMAIL,
